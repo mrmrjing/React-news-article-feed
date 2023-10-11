@@ -110,7 +110,7 @@ const CreateUpdateArticle: React.FC = () => {
                     <label>Title:</label>
                     <input 
                         type = "text"
-                        value = "{article.title}"
+                        value = {article.title}
                         onChange={(e)=> setArticle({... article, title:e.target.value})}
                     /> 
                     <div className='error'>{errors.title}</div>
@@ -149,7 +149,7 @@ const CreateUpdateArticle: React.FC = () => {
             </form>
 
             {/* Navigation Link */ }
-            <Link to="/Componenets/frontend/FetchDisplayArticles"> Go to Fetch/Display Page</Link> 
+            <Link to="/Frontend/FetchDisplayArticle"> Go to Fetch/Display Page</Link> 
         </div>
     ); 
 }; 
@@ -214,3 +214,11 @@ const MyForm: React.FC = () => {
 
 export default MyForm;
 */
+
+/*
+When the submit button is clicked: 
+- the form data is validated to ensure that all required fields are filled out 
+- if all required fields are filled, the form is sent to the database's endpoint via a HTTP post request 
+- error/success handling 
+- form reset 
+*/ 
